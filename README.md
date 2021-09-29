@@ -74,5 +74,12 @@ If you want the date can be deleted:
 4. `sh setup.sh`
 5. `browser:localhost:8000`
 
+## Posible Improvements: 📈
+- [ ] Implement Marios block without console
+- [ ] Implement NavBar like Responsive Design
+- [ ] Complete all examples per Week
+- [ ] Complete all labs 
+- [ ] Complete all psets 
+
 ## Images: 🖼️
 ![cards](https://res.cloudinary.com/dqxtoises/image/upload/v1632904463/2021-09-29-031514_545x548_scrot_xlrqr4.png)
