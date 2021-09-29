@@ -1,6 +1,6 @@
 # cs50 Demos
 
-This is the final project of cs50 course
+This is the final project of cs50 course from Harvard University.
 
 [Video Demo](https://youtu.be/aGzm9kANVbg)
 
