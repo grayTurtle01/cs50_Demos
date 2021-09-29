@@ -12,7 +12,7 @@ Also there is a  Week planificator project inside.
 
 This planificator can log users.
 
-[Live Demo](https://juanhernandez.pythonanywhere.com/)
+[Live Demo](https://grayturtle.pythonanywhere.com/)
 
 ## Technologies Used: 🧰
 
