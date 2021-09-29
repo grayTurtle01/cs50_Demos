@@ -19,7 +19,7 @@ Session(app)
 def index():
   if session.get('username') is None:
       session['username'] = 'anonymus'
-  return render_template("index.html") 
+  return render_template("index.html")
 
 @app.route("/week_0")
 def scratch():
@@ -55,7 +55,7 @@ def change_volume():
     factor_str = request.args['factor']
     factor = int(factor_str)
     change_sound_file(factor)
-    
+
     return jsonify(factor)
 
 import os
@@ -66,7 +66,7 @@ def change_sound_file(factor):
     # only works with integers values
     f1 = open(file_path_1, "rb" )
     f2 = open(file_path_2, "wb")
-    
+
     header = f1.read(44)
     f2.write(header)
 
@@ -79,11 +79,11 @@ def change_sound_file(factor):
 
         sample_int *= factor;
         if sample_int >= 2**16:
-            sample_int = sample_int % 2**16  
+            sample_int = sample_int % 2**16
 
-        
+
         sample_bytes = sample_int.to_bytes(2, 'big')
-        
+
         f2.write(sample_bytes)
 
 from PIL import Image, ImageFilter
@@ -117,9 +117,9 @@ def filter():
         image_f = image.filter(ImageFilter.FIND_EDGES)
 
     image_f.save(file_path_output)
-    
+
     return redirect("/week_4")
-    
+
 
 
 ''' WEEK-5 '''
@@ -142,7 +142,7 @@ def check_text():
 
   wrong_words = get_wrong_words(words, dic)
 
-  return jsonify(wrong_words) 
+  return jsonify(wrong_words)
 
 
 ''' WEEK-6'''
@@ -163,7 +163,7 @@ def get_voice():
     file_path_voice = os.path.join(base_path, "./static/sounds/voice.mp3")
     engine.save_to_file(text_input, file_path_voice)
     engine.runAndWait()
-    
+
     return redirect("/week_6")
 
 import qrcode
@@ -189,7 +189,7 @@ def get_probabilities():
       path = os.path.join(base_path, f"static/csv/{file_name}")
 
       probabilities = get_probabilities_world_cup(path, N_simulations)
-      
+
       dic = { 'probabilities': probabilities }
 
       return dic
@@ -221,7 +221,7 @@ def search_shows():
         query = f"SELECT title, year, episodes, rating FROM shows \
                   JOIN ratings ON show_id = id \
                   WHERE title LIKE '%{title}%' "
-        
+
     shows = db.execute( query )
 
     dic = {'shows': shows }
@@ -251,7 +251,7 @@ def week_9():
       return render_template("week_9.html", months=months, birthdays=birthdays)
 
     if request.method == 'POST':
-    
+
 
       name = request.form['person_name']
 
@@ -299,7 +299,7 @@ def planner():
         # ~ tasks = Task.query.filter_by(day="Today").order_by(Task.value.desc())
         tasks = Task.query.filter(or_(Task.day=="Today",  Task.day=="Food")).order_by(Task.value.desc())
         return render_template("planificator.html", tasks=tasks, weeks=weeks)
-        
+
     if request.method == 'POST':
         new_task = request.form['new_task']
         day = request.form['day']
@@ -319,7 +319,7 @@ def show_week(week):
           return redirect("/planificator")
 
         return render_template("week.html", tasks=tasks, days=days, week=week)
-        
+
     if request.method == 'POST':
         new_task = request.form['new_task']
         day = request.form['day']
@@ -334,7 +334,7 @@ def delete_task(ID):
     week = task.week
 
     task = Task.query.filter_by(id=int(ID)).delete()
-    
+
     db.session.commit()
 
     return redirect(f"/planificator/{week}")
@@ -346,7 +346,7 @@ def delete_all_day():
     day = request.args['day']
 
     tasks = Task.query.filter_by(day=day).filter_by(week=week).delete()
-    
+
     db.session.commit()
 
     return redirect(f"/planificator/{week}")
@@ -356,7 +356,7 @@ def delete_week():
     week = request.args['week']
 
     tasks = Task.query.filter_by(week=week).delete()
-    
+
     db.session.commit()
 
     return redirect(f"/planificator/{week}")
