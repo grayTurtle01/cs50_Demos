@@ -1,7 +1,7 @@
 # cs50 Demos
 
 This is the final project of cs50x course from Harvard University. The idea behind this project is compiled all
-the excercises, examples, labs and problems set of the course in one web application to see all the progress.
+the excercises, examples, labs and problems set of the course in one web application to see all the progress and practice meanwhile.
 Also this app allow you to planific your tasks over the weeks.
 
 [Video Demo](https://youtu.be/aGzm9kANVbg)
