@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+{% block title %}Week-5{% endblock %}
+
+{% block body %}
+   
+    <link rel="stylesheet" href="static/css/week_5.css">
+
+    <h1>Week-5 Data-Estructures</h1>
+
+    <div class="container">
+
+      <div class="card" style="width:300px; height:350px;">
+        <h2>speller.py</h2>
+
+        <form action="/check_text"  onsubmit="return false;">
+          <select name="dictionary" id="dictionary">
+            <option>large</option>
+            <option>small</option>
+          </select>
+
+          <textarea rows=4 cols=35 maxlength=140 
+                    name="input_text" id="input_text"
+                    placeholder="text"
+                    value=""
+                    autofocus required>
+
+          </textarea>
+
+          <button id="check_text">Check Text</button>
+
+        </form>
+
+
+          <input id="wrong_words_field" placeholder="wrong words" readonly>
+          <button id="clear_speller">Clear</button>   
+
+      </div>       
+    </div>
+
+
+    <script src="static/js/week_5.js"></script>
+    
+{% endblock %}

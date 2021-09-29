@@ -1,0 +1,36 @@
+body{
+    
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+    
+.card{
+    border: 1px solid black;
+    border-radius: 10px;
+
+    width: 250px;
+    height: 220px;
+
+    margin: 10px;
+
+    overflow: auto;
+}
+form{
+    padding: 10px;
+}
+
+img{
+    width: 220px;
+    height: 220px;
+
+}
+
+.output{
+    width: 200px;
+    height: 200px;
+
+}

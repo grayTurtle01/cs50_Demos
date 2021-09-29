@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+{% block title %}Week-2{% endblock %}
+
+{% block body %}
+   
+    <link rel="stylesheet" href="static/css/week_2.css">
+
+    <h1>Week-2 Arrays</h1>
+
+    <div class="container">
+
+       
+        <div class="card">    
+            <h2>scrabble.js</h2>
+            <form onsubmit="return false;">
+                <input id="word1" style="width:100px" placeholder="Word 1"  required autofocus>
+                <input id="word2" style="width:100px" placeholder="Word 2" required>
+                <button id="get_winner">Play</button>
+                <input id="winner" style="width:100px"  readonly>
+            </form>
+            <button id="clear_scrabble">Clear</button>
+        </div>
+
+         <div class="card">    
+            <h2>readability.js </h2>
+            <form onsubmit="return false;">
+                <input id="text" style="width:200px" placeholder="Text" required>
+                <button id="get_index">Calculate Index</button>
+                <input id="index" style="width:100px"  readonly>
+            </form>
+            <button onsubmit="return false;" id="clear_text">Clear</button>
+        </div>
+
+         <div class="card">    
+            <h2>caesar.js </h2>
+            <form onsubmit="return false;">
+                <input id="plain_text" style="width:200px" placeholder="Plain Text" required>
+                <input id="key_number" style="width:50px" placeholder="Key" type="number" required>
+                <button id="cipher">Cipher Text</button>
+                <input id="cipher_text" style="width:200px"  readonly>
+            </form>
+            <button onsubmit="return false;" id="clear_caesar">Clear</button>
+        </div>
+
+         <div class="card" style="width: 310px; height: 250px;">    
+            <h2>substitution.js </h2>
+<!--
+            <p>abcdefghijklmnopqrstuvwxya</p>
+            <p>JTREKYAVOGDXPSNCUIZLFBMWHQ</p>
+-->
+            <form onsubmit="return false;">
+                <input id="plain_text_sub" style="width:275px" placeholder="Plain Text" required>
+                <input id="key_26" style="width:275px" placeholder="Key"  required>
+                <button id="cipher_sub">Cipher Text</button>
+                <input id="cipher_text_sub" style="width:275px"  readonly>
+            </form>
+            <button onsubmit="return false;" id="clear_substitution">Clear</button>
+        </div>
+
+
+
+    </div>
+
+
+    <script src="static/js/week_2.js"></script>
+    
+{% endblock %}

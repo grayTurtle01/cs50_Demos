@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block title %}Week-3{% endblock %}
+
+{% block body %}
+   
+    <link rel="stylesheet" href="static/css/week_3.css">
+
+    <h1>Week-3 Algorithms</h1>
+
+    <div class="container">
+       
+
+         <div class="card">    
+            <h2>plurality.js </h2>
+            <form onsubmit="return false;">
+                <input id="candidates" placeholder="Candidates" style="width:200px" required autofocus>
+                <input id="number_votes" style="width:120px" placeholder="Number Votes"
+                       type="number" required >
+                <button id="make_pool">Pool</button>
+                <label>Winner:</label>
+                <input id="winner" style="width:100px" value="" readonly>
+            </form>
+            <button onsubmit="return false;" id="clear_plurality">Clear</button>
+        </div>
+
+
+    </div>
+
+
+    <script src="static/js/week_3.js"></script>
+    
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+{% block title %}Week-9{% endblock %}
+
+{% block body %}
+   
+    <link rel="stylesheet" href="static/css/week_9.css">
+
+    <h1>Week-9 Flask</h1>
+
+    <div class="container">
+
+        <div class="card" style="width:350px; height: 500px;">    
+            <h2>birthday.py </h2>
+
+            <form action="/week_9" method="POST">
+              <input id="name"
+                     name="person_name" 
+                     placeholder="Name"
+                     style="width:100px;" 
+                     autofocus
+                     required
+                 >
+
+              <select required name="month">
+                <option selected disabled>Month</option>
+                {% for month in months %}
+                  <option>{{month}}</option>
+                {% endfor %}
+              </select>
+
+              <select required name="day">
+                  <option selected disabled>Day</option>
+                  {% for day in range(1,32) %}
+                   <option>{{day}}</option>
+                  {% endfor %}
+              </select>
+                  
+      
+              <button id="add_birthday">Add Birthday</button>
+             
+            </form>
+
+
+          <table border="1px" style="width:100%; text-align: center; ">
+            <thead>
+              <th>Name</th>
+              <th>Birthday</th>
+              <th>Delete</th>
+            </thead>
+            <tbody>
+            {% for birthday in birthdays %}
+              <tr>
+                <td>{{birthday.name}}</td>
+                <td>{{birthday.birth}}</td>
+                <td>
+                   <a href="/delete_birthday/{{birthday.id}}">
+                    <button>Delete</button>
+                  </a> 
+                </td>
+              </tr>
+            {% endfor %}  
+            </tbody>
+          </table>
+
+        </div>
+
+      
+
+
+    </div>
+
+
+    <script src="static/js/week_9.js"></script>
+ 
+{% endblock %}

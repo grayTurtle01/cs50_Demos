@@ -1,0 +1,78 @@
+{% extends 'layout.html' %}
+{% block title %}Week-4{% endblock %}
+
+{% block body %}
+   
+    <link rel="stylesheet" href="static/css/week_4.css">
+
+    <h1>Week-4 Memory</h1>
+
+    <div class="container">
+       
+         <!-- Volume -->
+         <div class="card">    
+            <h2>volume.js </h2>
+            <form onsubmit="return false;">
+
+                <input name="factor"
+                       type="number"
+                       style="width: 75px;"
+                       placeholder="factor" 
+                       required
+                       autofocus
+                       >
+                       
+                <button id="change_volume">Change Volume</button>
+                
+            </form>
+
+            <input id="play" style="width:110px"
+                   type="button"  value="Play V1" >
+
+            <input id="play_output" style="width:110px"
+                   type="button"  value="Play V1" >
+
+            <audio>
+                <source src="/static/sounds/default.wav">
+            </audio>
+
+            <audio id="output">
+                <source src="/static/sounds/output.wav">
+            </audio>
+        </div>
+
+        <!-- Filter -->
+        <div class="card" style="width:450px;">
+            <div class="row">
+            <div class="input">
+              <h2>filter.py</h2>
+
+              <form action="/filter">
+                  <select name="filter">
+                      <option selected disabled>filter</option>
+                      <option>gray</option>
+                      <option>blur</option>
+                      <option>contour</option>
+                      <option>emboss</option>
+                      <option>edges</option>
+                  </select>
+
+              <button>Apply Filter</button>    
+
+              </form>
+              <img src="static/images/scratch.jpg" style="width:80px; height:80px;">
+            </div>
+
+             <div class="output">
+
+              <img src="static/images/output.png">
+            </div> 
+        </div>
+        </div>
+
+    </div>
+
+
+    <script src="static/js/week_4.js"></script>
+    
+{% endblock %}

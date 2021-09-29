@@ -1,0 +1,102 @@
+{% extends 'layout.html' %}
+
+{% block title %}Week-1{% endblock %}
+
+{% block body %}
+    <link rel="stylesheet" href="static/css/week_1.css">
+
+    <h1>Week-1 C</h1>
+
+    <div class="container">
+
+        <div class="card">    
+            <h2>hello.c</h2>
+            <form onsubmit="return false;">
+                <button id="hello">Hello.c</button>
+                <input  id="hello_response" readonly  style="width:100px;">
+            </form>
+            <button id="clear">Clear</button>
+        </div>
+
+        <div class="card">    
+            <h2>water.c</h2>
+            <form onsubmit="return false;">
+                <input placeholder="minutes"
+                       style="width:100px"
+                       id="minutes">
+                <button id="calculate">Calculate</button>
+                <input id="bottles" style="width:100px" readonly >
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>greets.c</h2>
+            <form onsubmit="return false;">
+                <input id="name" placeholder="Name" style="width:100px" autofocus required>
+                <button id="greets">Greets</button>
+                <br>
+                <input  id="response" style="width:150px" readonly>
+            </form>
+            <button id="clear_name">Clear</button>
+        </div>    
+
+        <!--Population -->
+        <div class="card">
+            <h2>population.c</h2>
+            <form onsubmit="return false">
+                <input id="initial_population"
+                       placeholder="Initial Population"
+                       type="number"
+                       style="width:150px" 
+                       required>
+                <br>
+                <input id="final_population"
+                       placeholder="Final Population"
+                       type="number"
+                       style="width:150px"
+                       required>
+                <br>
+                <button id="get_years">Calculate Years</button>
+                <input id="years" style="width:50px" readonly>
+            </form>
+        </div>
+
+      <div class="card">    
+            <h2>mario.c</h2>
+            <form onsubmit="return false">
+                <input placeholder="height"
+                       type="number"
+                       style="width:100px"
+                       id="height"
+                       value="foo">
+                <button id="print_pyramid">Print Pyramid (Console)</button>
+                <br>
+                <button id="print_pyramid_2">Print Pyramid II (Console)</button>
+             
+            </form>
+        </div>
+
+        <div class="card">    
+            <h2>cash.c</h2>
+            <form onsubmit="return false;">
+                <input id="cash" required style="width:100px" placeholder="Cash" >
+                <button id="get_coins">Calculate coins</button>
+                <input id="coins" style="width:100px"  readonly>
+            </form>
+        </div>
+
+        <div class="card">    
+            <h2>credit.c</h2>
+            <form onsubmit="return false;">
+                <input id="number" required style="width:200px" placeholder="Credit Card Number" type="number">
+                <button id="validate">Validate Number</button>
+                <input id="result" style="width:100px"  readonly>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="static/js/week_1.js"></script>
+    <script src="static/js/lab-1.js"></script>
+
+{% endblock %}

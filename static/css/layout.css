@@ -1,0 +1,47 @@
+
+nav{
+  display: flex;
+  justify-content: space-between; 
+/*
+  margin-top:0px
+*/
+  padding:0px;
+
+/*
+  border: 1px solid black;
+*/
+
+}
+
+nav li{
+    display: inline;
+    font-size: 19px;
+    margin: 3px;
+}
+
+nav a{
+  text-decoration: none;
+}
+
+nav a:hover{
+  text-decoration: underline;
+  color: lightgray;
+}
+
+nav ul{
+  margin: 0px;
+/*
+  border: 1px solid white;
+*/
+}
+
+.control{
+  font-size: 13px;
+/*
+  border: 1px solid blue;
+*/
+}
+
+#switch{
+  margin: 0px 15px 0px 0px;
+}

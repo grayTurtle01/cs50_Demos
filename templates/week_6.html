@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+{% block title %}Week-6{% endblock %}
+
+{% block body %}
+   
+    <link rel="stylesheet" href="static/css/week_6.css">
+
+    <h1>Week-6 Python</h1>
+
+    <div class="container">
+
+
+         <div class="card">    
+            <h2>voice.py </h2>
+            <form onsubmit="return false;">
+                <input id="text" name="text" style="width:200px" placeholder="Text" required>
+                <button id="get_voice">Play Text</button>
+            </form>
+            <button onsubmit="return false;" id="clear_text">Clear</button>
+
+            <audio>
+              <source src="static/sounds/voice.mp3">
+            </audio>
+
+        </div>
+
+        <div class="card" style="width:600px;" >
+
+            <div class="row">
+              <div class="input">
+                  <h2>qr.py </h2>
+                  <form onsubmit="return false;">
+                      <input id="url" style="width:200px" placeholder="http://www.x.com" required>
+                      <button id="get_qr">get QR code</button>
+                  </form>
+                  <button id="clear_url">Clear</button>
+              </div>    
+
+              <div class="output">
+                  <img src="static/images/qr.png">
+              </div>
+            </div>
+            
+        </div>
+
+
+         <div class="card" style="width:600px; display:flex;">    
+                <div class="input">
+                    <h2>tournament.py </h2>
+
+                    <form onsubmit="return false;">
+                    <input  name="simulations" value="1000"
+                            id="N_simulations"
+                            type="number" style="width:200px" placeholder="Simulations" required>
+                    <select name="file" id="file_name" required>
+                        <option disabled selected>World Cup</option>
+                        <option>2018m.csv</option>
+                        <option>2019w.csv</option>
+                    </select>
+                    <button id="get_probabilities">get Probrabilities</button>
+                    </form>
+                    <button id="clear_tournament">Clear</button>
+                </div>
+
+                <div class="output" id="probabilities_result">
+                </div>            
+        </div>
+
+
+
+
+    </div>
+
+
+    <script src="static/js/week_6.js"></script>
+    
+{% endblock %}

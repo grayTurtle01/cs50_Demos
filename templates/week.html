@@ -1,0 +1,101 @@
+    <title>{{week}}</title>
+    <link rel="stylesheet" href="../static/css/week.css">
+    <link href="static/images/favicon.ico" rel="icon" />
+
+    <div class="container">
+       
+       {% for day in days %}
+        <!-- Day Card  -->
+         <div class="card">
+
+            <div class="row">
+              <h3>{{ day }}</h3>
+               <form action="/delete_day">
+                  <input type="hidden" name="week" value="{{week}}">
+                  <input type="hidden" name="day" value="{{day}}">
+                  <input type="hidden" name="username" value="{{session['username']}}">
+                  <button>Clear Day</button>
+              </form>
+
+            </div>   
+
+            <form  action="/planificator/{{week}}" method="POST">
+                <input id="new_task"
+                       placeholder="New Task"
+                       style="width:175px"
+                       name="new_task" 
+                       required>
+                <input type="hidden" name="day" value="{{day}}">
+                <input type="hidden" name="username" value="{{session['username']}}">
+                
+                <button id="add_task">Add New Task</button>
+            </form>
+
+            <ul>
+            {% for task in tasks %}
+                {% if task.day == day and task.username == session['username'] %}
+            
+                <li class="row">
+                    
+                   <span class="{% if task.done %} done {% endif %} content">
+                    {{task.content}}
+                   </span> 
+
+                    <span class="options">
+                        
+                        <a href="/delete_task/{{task.id}}">
+                            <button style="padding:0px;">✖</button>
+                        </a>
+                        
+                        <a href="/change_state/{{task.id}}">
+                            <input type="checkbox"  {% if task.done %} checked {% endif%} >
+                        </a>
+                        
+                        <a href="/change_priority/{{task.id}}">
+                            <span>↑</span>    
+                        </a>
+
+                         <a href="/downvote/{{task.id}}">
+                            <span>↓</span>    
+                        </a>    
+                    </span>
+                    
+                </li>
+
+                {% endif %}
+            {% endfor %}    
+        </ul>
+
+            
+        </div>
+
+       {% endfor %}
+
+        <!-- Links Card  -->
+        <div class="card">
+            <div class="row">
+              <h2>{{week}}</h2>
+               <form action="/delete_week">
+                    <input type="hidden" name="week" value="{{week}}">
+                    <button>Clear Week</button>
+               </form>
+            </div>
+
+              <h2>Links:</h2>
+              <ul>
+                
+                <li><a href="/">Home</a></li>
+                <li><a href="/planificator">Today</a></li>
+                <li><a href="/planificator/Week-1">Week-1</a></li>
+                <li><a href="/planificator/Week-2">Week-2</a></li>
+                <li><a href="/planificator/Week-3">Week-3</a></li>
+              </ul>
+          </div>
+
+
+    </div>
+
+
+    <script src="../static/js/week.js"></script>
+    
+

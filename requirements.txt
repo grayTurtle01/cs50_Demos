@@ -1,0 +1,7 @@
+Flask
+Flask_SQLAlchemy
+flask-session
+pillow
+pyttsx3
+cs50
+qrcode

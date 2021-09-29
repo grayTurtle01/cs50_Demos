@@ -1,0 +1,42 @@
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+    
+.card{
+    border: 1px solid black;
+    border-radius: 10px;
+
+    width: 320px;
+    height: 300px;
+
+    margin: 50px;
+    overflow: auto;
+
+    text-align:center;
+}
+
+
+form{
+    padding: 5px;
+}
+
+#login_button{
+  width:175px;
+}
+
+.done{
+    text-decoration: line-through;
+    color: gray;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card a{
+    text-decoration: none;
+}

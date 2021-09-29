@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title%}{% endblock %}</title>
+    <link rel="stylesheet" href="static/css/layout.css">
+    <link rel="icon" href="static/images/favicon.ico">
+</head>
+<body>
+
+    <nav>
+      <ul >
+          <a href="/"><li>Home</li></a>
+          <a href="/week_0"><li>Week-0</li></a>
+          <a href="/week_1"><li>Week-1 </li></a>
+          <a href="/week_2"><li>Week-2 </li></a>
+          <a href="/week_3"><li>Week-3 </li></a>
+          <a href="/week_4"><li>Week-4 </li></a>
+          <a href="/week_5"><li>Week-5 </li></a>
+          <a href="/week_6"><li>Week-6 </li></a>
+          <a href="/week_7"><li>Week-7 </li></a>
+          <a href="/week_8"><li>Week-8 </li></a>
+          <a href="/week_9"><li>Week-9 </li></a>
+          <a href="/planificator"><li>Planificator</li></a>
+      </ul>
+
+      <div class="control">
+        <label for="switch">Night Mode:</label>
+        <input type="checkbox" id="switch" name="switch" title="Nigth Mode">
+        {{session['username']}}
+
+        {% if session['username'] == 'anonymus' %}
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+        {% endif %}
+
+
+        {% if session['username'] != 'anonymus' %}
+          <a href="/logout">Logout</a>
+        {% endif %}
+
+      </div>
+    </nav>
+
+    {% block body%}
+    
+    {% endblock %}
+
+  <script src="static/js/layout.js"></script>
+</body>
+</html>

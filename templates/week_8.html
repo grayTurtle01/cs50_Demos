@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+{% block title %}Week-8{% endblock %}
+
+{% block body %}
+   
+    <link rel="stylesheet" href="static/css/week_7.css">
+
+    <h1>Week-8 HTML CSS JS</h1>
+
+    <div class="container">
+
+
+         <div class="card">    
+            <h2>hello.js </h2>
+            <form onsubmit="return false;">
+
+                <input id="name" name="name" style="width:200px" placeholder="Name" required autofocus>
+                <button id="greets">Greets</button>
+            </form>
+            <button onsubmit="return false;" id="clear_greets">Clear</button>
+        </div>
+
+
+        <div class="card" style="width:450px;">    
+            <h2>search.js </h2>
+
+<!--
+            <form onsubmit="return false;">
+-->
+
+              <input id="input_text"
+                 placeholder="What do you want to search?"
+                 autofocus
+                 required
+                 >
+
+              <select>
+                  <option>Google</option>
+                  <option>Youtube</option>
+                  <option>Twitter</option>
+                  <option>Wikipedia</option>
+              </select>
+                  
+              <a href="http://www.google.com" target="_blank" id="link" >
+                  <button id="search">Search</button>
+              </a>    
+                
+<!--
+            </form>
+-->
+
+            <button onsubmit="return false;" id="clear_search">Clear</button>
+        </div>
+
+        <div class="card">
+          <h2>blinker.js</h2>
+          <button id="blinker" style="width:100px;">Start</button>
+          <h1 id="blinker_text" style="text-align:center; font-size:45px;">Blink</h1>
+
+        </div>
+
+
+        <div class="card">
+          <h2>copy.js</h2>
+          <input id="input_text2" placeholder="write something">
+          <br>
+          <input id="output_text" readonly>
+          <button id="clear_copy">Clear</button>
+        </div>
+
+
+    </div>
+
+
+    <script src="static/js/week_8.js"></script>
+ 
+{% endblock %}

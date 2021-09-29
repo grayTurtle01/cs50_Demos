@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+{% block title %} Register {% endblock %}
+
+{% block body %}
+    <link rel="stylesheet" href="static/css/login.css">
+    <link href="static/images/favicon.ico" rel="icon" />
+
+
+    <div class="container">
+
+      <!-- Register Card  -->
+      <div class="card">
+        <h1>Register</h1>
+        
+        <form  action="/register" method="POST">
+            <input name="username"
+                   placeholder="Username"
+                   style="width:175px"
+                   autofocus 
+                   required>
+
+            <input name="password"
+                   type="password" 
+                   placeholder="Password"
+                   style="width:175px" 
+                   required>
+
+            <input name="confirmation"
+                   type="password" 
+                   placeholder="Password Again"
+                   style="width:175px" 
+                   required>
+
+            <button id="login_button">Register</button>
+        </form>
+        
+        {{ message }}             
+      </div> 
+
+     
+    </div>
+    
+{% endblock %}

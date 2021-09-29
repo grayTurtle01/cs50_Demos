@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+{% block title %}Week-7{% endblock %}
+
+{% block body %}
+   
+    <link rel="stylesheet" href="static/css/week_7.css">
+
+    <h1>Week-7 SQL</h1>
+
+    <div class="container">
+
+
+         <div class="card">    
+            <h2>shows.py </h2>
+            <form onsubmit="return false;">
+                <input id="title" name="title" style="width:200px" placeholder="Show's Title" required autofocus>
+                <label>Exactly</label>
+                <input type="checkbox" checked id="exactly">
+                <button id="search_shows">Search</button>
+            </form>
+            <button onsubmit="return false;" id="clear_shows">Clear</button>
+        </div>
+
+        <div class="card" style="width:400px; text-align:center" >
+           <table border="1px" style="width:100%; text-align:center; ">
+               <thead>
+                 <th>Title</th>
+                 <th>Year</th>
+                 <th>Epis</th>
+                 <th>Rat</th>
+               </thead>
+               <tbody id="search_result">
+
+               </tbody>
+           </table>
+
+        </div>
+
+
+    </div>
+
+
+    <script src="static/js/week_7.js"></script>
+    
+{% endblock %}
