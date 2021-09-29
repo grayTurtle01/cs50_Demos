@@ -24,6 +24,9 @@ The app has nigh-mode feature.
 
 [Live Demo](https://grayturtle.pythonanywhere.com/)
 
+## Funny Implementation:
+
+
 ## Technologies Used: 🧰
 
 * HTML
