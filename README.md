@@ -8,19 +8,19 @@ This is the final project of cs50 course from Harvard University.
 
 Some examples, labs and problems sets from the course was implemented in this app.
 
-The implementations were made it in html javascript and python.
+The implementations were made it in html, css, javascript and python.
 
 Each unit of code was wrapped in a card.
 
 Also there is a  Week planificator project inside.
 
-The Week planificator has Today interface when the user can set the task for today.
+The Week planificator has 'Today' interface when the user can put the tasks for today.
 
-Also there is a Week planificator, where the user can put their task for every week.
+Also there is a 'Week' planificator interface, where the user can put their tasks for every week splitted by days.
 
-This planificator can log users.
+This planificator can register users log-in users and log-out users.
 
-The app has nigh-mode feature
+The app has nigh-mode feature.
 
 [Live Demo](https://grayturtle.pythonanywhere.com/)
 
