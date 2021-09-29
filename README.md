@@ -6,7 +6,8 @@ This is the final project of cs50 course from Harvard University.
 
 ## Description
 
-Some exercises from the course was implemented in this app.
+Some examples, labs and problems sets from the course was implemented in this app.
+The implementations were made it in html javascript and python.
 
 Also there is a  Week planificator project inside.
 
