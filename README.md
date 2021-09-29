@@ -6,7 +6,7 @@ Also this app allow you to planific your tasks over the weeks.
 
 [Video Demo](https://youtu.be/aGzm9kANVbg)
 
-## Description
+## Description 🗞️
 
 Some examples, labs and problems sets from the course was implemented in this app.
 
@@ -24,12 +24,12 @@ This planificator can register users log-in users and log-out users. For this ta
 
 The app has nigh-mode feature. For this task Local Store was used.
 
-## Deploy
+## Deploy 🚀
 This project was deployed in the cloud server [pythonanywhere.com](http://pythonanywhere.com)
 
 [Live Demo](https://grayturtle.pythonanywhere.com/)
 
-## Fun Implementations:
+## Fun Implementations: 🤡
 ### mario.js
 This block can print a half pyramid or a full pyramid.
 The output can see in the browser console.
