@@ -24,7 +24,16 @@ The app has nigh-mode feature.
 
 [Live Demo](https://grayturtle.pythonanywhere.com/)
 
-## Funny Implementation:
+## Fun Implementations:
+### mario.js
+This block can print a half pyramid or a full pyramid.
+The output can see in the browser console.
+
+#### filter.py
+This block can apply a filter over a fixed scratch-cat image.
+The program implements functions from pillow python library.
+The request use ajax technologie.
+
 
 
 ## Technologies Used: 🧰
