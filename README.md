@@ -1,6 +1,8 @@
 # cs50 Demos
 
-This is the final project of cs50 course from Harvard University.
+This is the final project of cs50x course from Harvard University. The idea behind this project is compiled all
+the excercises, examples, labs and problems set of the course in one web application to see all the progress.
+Also this app allow you to planific your tasks over the weeks.
 
 [Video Demo](https://youtu.be/aGzm9kANVbg)
 
@@ -21,6 +23,9 @@ Also there is a 'Week' planificator interface, where the user can put their task
 This planificator can register users log-in users and log-out users. For this task flask-session was used. 
 
 The app has nigh-mode feature. For this task Local Store was used.
+
+## Deploy
+This project was deployed in the cloud server [pythonanywhere.com](http://pythonanywhere.com)
 
 [Live Demo](https://grayturtle.pythonanywhere.com/)
 
@@ -77,9 +82,25 @@ If you want the date can be deleted:
 ## Posible Improvements: 📈
 - [ ] Implement Marios block without console
 - [ ] Implement NavBar like Responsive Design
+- [ ] All images perfect squares
+- [ ] Resize the Scratch Images when were clicked
+- [ ] Add sephia and edge filter on filter.py
 - [ ] Complete all examples per Week
 - [ ] Complete all labs 
 - [ ] Complete all psets 
+
+## Contributions: 🎁
+If you want add some example, lab, or pset feel free to fork the repo add the code and make the pull request.
+
+Instructions.
+1. Fork this repo
+2. Clone the forked repo
+3. Add new code
+4. push the new code to your forked repo
+5. Make pull request to this repo
+
+Issues:
+If you have any suggestion to improve the project you can open a issue.
 
 ## Images: 🖼️
 ![cards](https://res.cloudinary.com/dqxtoises/image/upload/v1632904463/2021-09-29-031514_545x548_scrot_xlrqr4.png)
